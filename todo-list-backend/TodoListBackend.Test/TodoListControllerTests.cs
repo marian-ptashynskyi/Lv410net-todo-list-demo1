@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Text;
 using Xunit;
 using Moq;
 using System.Threading.Tasks;
-using TodoListBackend.DAL.Repositories;
 using TodoListBackend.BLL.Interfaces;
 using TodoListBackend.BLL.DTOs;
 using TodoListBackend.WEB.Controllers;

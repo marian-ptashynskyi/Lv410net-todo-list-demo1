@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TodoListBackend.BLL.DTOs;
 using TodoListBackend.DAL.Entities;
 
@@ -18,6 +15,17 @@ namespace TodoListBackend.Test
                 new TodoItemDTO { Text = "Task 3", Completed = false },
                 new TodoItemDTO { Text = "Task 4", Completed = true },
                 new TodoItemDTO { Text = "Task 5", Completed = false }
+            };
+        }
+        public static List<TodoItem> GetAllItemsList()
+        {
+            return new List<TodoItem>()
+            {
+                new TodoItem { Text = "Task 1", Completed = true },
+                new TodoItem { Text = "Task 2", Completed = false },
+                new TodoItem { Text = "Task 3", Completed = false },
+                new TodoItem { Text = "Task 4", Completed = true },
+                new TodoItem { Text = "Task 5", Completed = false }
             };
         }
     }

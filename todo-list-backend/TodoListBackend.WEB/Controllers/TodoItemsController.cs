@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TodoListBackend.BLL.Interfaces;
@@ -103,14 +102,6 @@ namespace TodoListBackend.WEB.Controllers
 
                 return NoContent();
             }
-            catch (ArgumentNullException e)
-            {
-                return NotFound(e);
-            }
-            catch (NullReferenceException e)
-            {
-                return NotFound(e);
-            }
             catch (Exception e)
             {
                 return BadRequest(e);
@@ -129,10 +120,6 @@ namespace TodoListBackend.WEB.Controllers
                 await _service.DeleteAsync(id);
 
                 return NoContent();
-            }
-            catch (ArgumentNullException e)
-            {
-                return NotFound(e);
             }
             catch (NullReferenceException e)
             {

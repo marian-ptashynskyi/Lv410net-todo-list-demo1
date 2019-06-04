@@ -28,24 +28,14 @@ namespace TodoListBackend.BLL.Services
 
         public async Task<TodoItemDTO> DeleteAsync(int id)
         {
-            try
-            {
-                TodoItem del = await _repository.DeleteAsync(id);
-                return _mapper.Map<TodoItem, TodoItemDTO>(del);
-            }
-            catch (NullReferenceException e)
-            {
-                throw e;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
+            TodoItem del = await _repository.DeleteAsync(id);
+            return _mapper.Map<TodoItem, TodoItemDTO>(del);
         }
 
         public async Task<IEnumerable<TodoItemDTO>> GetAllAsync()
         {
-            return await _mapper.Map<Task<IEnumerable<TodoItem>>, Task<IEnumerable<TodoItemDTO>>>(_repository.GetAllAsync());
+            IEnumerable<TodoItem> allItems = await _repository.GetAllAsync();
+            return _mapper.Map<IEnumerable<TodoItem>, IEnumerable<TodoItemDTO>>(allItems);
         }
 
         public async Task<TodoItemDTO> GetByIdAsync(int id)
@@ -62,15 +52,8 @@ namespace TodoListBackend.BLL.Services
 
         public async Task<TodoItemDTO> UpdateAsync(TodoItemDTO item)
         {
-            try
-            {
-                TodoItem todoItem = _mapper.Map<TodoItemDTO, TodoItem>(item);
-                return await _mapper.Map<Task<TodoItem>, Task<TodoItemDTO>>(_repository.UpdateAsync(todoItem));
-            }
-            catch (NullReferenceException e)
-            {
-                throw e;
-            }
+            TodoItem todoItem = _mapper.Map<TodoItemDTO, TodoItem>(item);
+            return await _mapper.Map<Task<TodoItem>, Task<TodoItemDTO>>(_repository.UpdateAsync(todoItem));
         }
     }
 }
