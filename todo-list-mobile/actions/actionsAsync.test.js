@@ -104,7 +104,7 @@ describe('>>>A C T I O N --- Test asynchronous action creators', () => {
       },
     ]
     const store = mockStore({})
-    return store.dispatch(ActionCreators.fetchUpdateData(BASE_URL, 5)).then(() => {
+    return store.dispatch(ActionCreators.fetchUpdateData(BASE_URL, {id: 5})).then(() => {
       expect(store.getActions()).toEqual(expectedActions)
     })
   });
@@ -118,7 +118,7 @@ describe('>>>A C T I O N --- Test asynchronous action creators', () => {
       },
     ]
     const store = mockStore({})
-    return store.dispatch(ActionCreators.fetchUpdateData(BASE_URL, 5)).then(() => {
+    return store.dispatch(ActionCreators.fetchUpdateData(BASE_URL, { id:5 })).then(() => {
       expect(store.getActions()).toEqual(expectedActions)
     })
   });
