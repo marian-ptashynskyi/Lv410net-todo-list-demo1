@@ -23,7 +23,7 @@ namespace TodoListBackend.Test
         {
             // Arrange
             var mock = new Mock<ITodoItemService>();
-            mock.Setup(serv => serv.GetAllAsync()).Returns(async () => { return DBContextMocker.GetAllDTOsList(); });
+            mock.Setup(serv => serv.GetAllAsync()).Returns(async () => { return DullData.GetAllDTOsList(); });
             var controller = new TodoItemsController(mock.Object);
 
             // Act
