@@ -49,7 +49,7 @@ class TodoList extends Component {
 
 const getVisibleTodos = (todos, filter) => {
     switch (filter) {
-        case VISIBILITY_FILTERS.SHOW_completed:
+        case VISIBILITY_FILTERS.SHOW_COMPLETED:
             return todos.filter(todo => todo.completed);
         case VISIBILITY_FILTERS.SHOW_ACTIVE:
             return todos.filter(todo => !todo.completed);

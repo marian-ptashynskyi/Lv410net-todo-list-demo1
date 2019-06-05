@@ -28,8 +28,8 @@ describe('>>>A C T I O N --- Test synchronous action creators', () => {
         expect(remove).toEqual({ type: TODO_OPERATIONS.REMOVE_TODO, id: 0 })
     });
     it('+++ actionCreator setVisibilityFilter', () => {
-        const setFilter = setVisibilityFilter(VISIBILITY_FILTERS.SHOW_completed)
-        expect(setFilter).toEqual({ type: SET_VISIBILITY_FILTER, filter: VISIBILITY_FILTERS.SHOW_completed })
+        const setFilter = setVisibilityFilter(VISIBILITY_FILTERS.SHOW_COMPLETED)
+        expect(setFilter).toEqual({ type: SET_VISIBILITY_FILTER, filter: VISIBILITY_FILTERS.SHOW_COMPLETED })
     });
     it('+++ actionCreator fetchTodosRequest', () => {
         const fetchRequest = fetchTodosRequest(true)

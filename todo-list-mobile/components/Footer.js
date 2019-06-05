@@ -12,7 +12,7 @@ class Footer extends Component {
         return (
             <View style={styles.container}>
                 <FilterButton filter={VISIBILITY_FILTERS.SHOW_ACTIVE} name={'md-notifications'}>Active</FilterButton>
-                <FilterButton filter={VISIBILITY_FILTERS.SHOW_completed} name={'md-checkbox-outline'}>completed</FilterButton>
+                <FilterButton filter={VISIBILITY_FILTERS.SHOW_COMPLETED} name={'md-checkbox-outline'}>completed</FilterButton>
                 <FilterButton filter={VISIBILITY_FILTERS.SHOW_ALL} name={'md-list'}>All</FilterButton>
             </View>
         );
