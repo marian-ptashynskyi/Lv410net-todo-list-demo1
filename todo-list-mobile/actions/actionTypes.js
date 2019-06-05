@@ -9,7 +9,7 @@ export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const VISIBILITY_FILTERS = {
     SHOW_ALL: 'SHOW_ALL',
     SHOW_ACTIVE: 'SHOW_ACTIVE',
-    SHOW_completed: 'SHOW_completed'
+    SHOW_COMPLETED: 'SHOW_COMPLETED'
 }
 
 export const FETCH_FILTERS = {
