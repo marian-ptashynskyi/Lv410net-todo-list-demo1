@@ -6,6 +6,8 @@ node_modules/**/*
 *.key
 *.mobileprovision
 
+*/coverage/*
+
 */baseURL.*
 
 # Created by https://www.gitignore.io/api/aspnetcore,visualstudio

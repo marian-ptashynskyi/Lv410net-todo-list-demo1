@@ -221,21 +221,6 @@ namespace TodoListBackend.Test
             Assert.Equal(StatusCodes.Status404NotFound, result.StatusCode);
         }
         [Fact]
-        public async Task TestDeleteAsync_404NotFound_AE()
-        {
-            // Arrange
-            var mock = new Mock<ITodoItemService>();
-            TodoItemDTO item = new TodoItemDTO { Id = 1, Text = "", Completed = false };
-            mock.Setup(serv => serv.DeleteAsync(item.Id)).Returns(async () => { throw new ArgumentNullException(); });
-            var controller = new TodoItemsController(mock.Object);
-
-            // Act
-            var result = (await controller.DeleteAsync(item.Id)).Result as IStatusCodeActionResult;
-
-            // Assert
-            Assert.Equal(StatusCodes.Status404NotFound, result.StatusCode);
-        }
-        [Fact]
         public async Task TestDeleteAsync_400BadRequest()
         {
             // Arrange
